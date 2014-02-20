@@ -46,7 +46,7 @@ It supports Following Parameters
     		'template' => 'MaintenanceMode/index'
     	),
     ```
-3. **ip_filters** this is either a string containing a single ip or an array containing multiple.
+3. **ip_filters** this is either a string containing a single IP or an array containing multiple IPs for which maintainance mode will NOT  be applied.
 
     ```
     	'ip_filters' => array('1277.0.*.*','201.201.201.1')
