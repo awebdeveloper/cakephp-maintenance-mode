@@ -100,3 +100,11 @@ class MaintenanceMode extends DispatcherFilter {
 	}
   
 }
+
+
+
+
+
+
+You can read more on filters at CakePHP docs 
+http://book.cakephp.org/2.0/en/development/dispatch-filters.html
