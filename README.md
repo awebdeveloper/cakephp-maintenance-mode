@@ -24,7 +24,7 @@ Configure::write('MaintenanceMode', array(
 		'layout' => '',
 		'template' => 'MaintenanceMode/index'
 	),
-	'ip_filters' => array('1277.0.*.*')
+	'ip_filters' => array('127.0.*.*')
 ));
 ```
 
@@ -49,7 +49,7 @@ It supports Following Parameters
 3. **ip_filters** this is either a string containing a single IP or an array containing multiple IPs for which maintainance mode will NOT  be applied.
 
     ```
-    	'ip_filters' => array('1277.0.*.*','201.201.201.1')
+    	'ip_filters' => array('127.0.*.*','201.201.201.1')
     ```
     or
 
