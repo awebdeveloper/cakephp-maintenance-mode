@@ -63,7 +63,6 @@ class MaintenanceMode extends DispatcherFilter {
 		$View 				= new View(null);
 		$View->viewVars 	= $MaintenanceMode;
 		$View->hasRendered 	= false;
-		$View->viewPath 	= 'MaintenanceMode';
 		$View->helpers 		= $helpers;
 		$View->loadHelpers();
 		return $View;
