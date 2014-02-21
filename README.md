@@ -57,3 +57,11 @@ It supports Following Parameters
     	'ip_filters' => '201.201.201.1'
     ```
 
+
+
+
+For info read the docs on dispatch filter
+
+http://book.cakephp.org/2.0/en/development/dispatch-filters.html
+
+
