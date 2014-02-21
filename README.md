@@ -28,6 +28,16 @@ Configure::write('MaintenanceMode', array(
 ));
 ```
 
+Also in the same file find the below code and add this line
+
+```
+Configure::write('Dispatcher.filters', array(
+    'AssetDispatcher',
+    'CacheDispatcher',
+    'MaintenanceMode' ## this line 
+));
+```
+
 ### Parameters ###
 It supports Following Parameters
 
