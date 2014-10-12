@@ -1,0 +1,36 @@
+
+{
+	"name": "awebdeveloper/cakephp-maintenance-mode",
+	"description": "CakePHP Maintenance Mode",
+	"type": "cakephp-plugin",
+	"keywords": [
+		"cakephp",
+		"dispatcher",
+		"maintenance"
+	],
+	"homepage": "http://github.com/awebdeveloper/cakephp-maintenance-mode",
+	"license": "MIT",
+	"authors": [
+		{
+			"name":"Prathik Shetty",
+			"role":"Maintainer",
+			"homepage":"https://github.com/awebdeveloper"
+		},
+		{
+			"name": "Jose Diaz-Gonzalez",
+			"email": "email@josediazgonzalez.com",
+			"homepage": "http://josediazgonzalez.com",
+			"role": "Contributor"
+		}
+	],
+	"require": {
+		"composer/installers": "*"
+	},
+	"support": {
+		"issues": "https://github.com/awebdeveloper/cakephp-maintenance-mode/issues",
+		"source": "https://github.com/awebdeveloper/cakephp-maintenance-mode"
+	},
+	"extra": {
+		"installer-name": "MaintenanceMode"
+	}
+}
