@@ -6,18 +6,49 @@ CakePHP Maintenance Mode is to put your website in maintenance mode while you do
 This filter file would tell CakePHP to put all requests to maintenance mode i.e show a msg but would allow requests from your IPs to be processed normally.
 
 
+## Installation
+
+_[Using [Composer](http://getcomposer.org/)]_
+
+[View on Packagist](https://packagist.org/packages/awebdeveloper/cakephp-maintenance-mode), and copy
+the JSON snippet for the latest version into your project's `composer.json`. Eg, v. 1.2.0 would look like this:
+
+	{
+		"require": {
+			"awebdeveloper/cakephp-maintenance-mode": "1.2.0"
+		}
+	}
+
+Because this plugin has the type `cakephp-plugin` set in it's own `composer.json`, composer knows to install it inside your `/Plugin` directory, rather than in the usual vendor directory.
+It is recommended that you add `/Plugin/MaintenanceMode` to your .gitignore file. (Why? [Read this](http://getcomposer.org/doc/faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md).)
+
+_[Manual]_
+
+* Download this: [http://github.com/awebdeveloper/cakephp-maintenance-mode/zipball/master](http://github.com/awebdeveloper/cakephp-maintenance-mode/zipball/master)
+* Unzip that download.
+* Copy the resulting folder to `app/Plugin`
+* Rename the folder you just copied to `MaintenanceMode`
+
+_[GIT Submodule]_
+
+In your app directory type:
+
+	git submodule add -b master git://github.com/awebdeveloper/cakephp-maintenance-mode.git Plugin/MaintenanceMode
+	git submodule init
+	git submodule update
+
+_[GIT Clone]_
+
+In your `Plugin` directory type:
+
+	git clone -b master git://github.com/awebdeveloper/cakephp-maintenance-mode.git MaintenanceMode
 
 
-### Setup ###
-Copy the file **MaintenanceMode.php** into 
-```
-app\Lib\Routing\Filter
-```
+### Usage ###
 
+In your **Bootstrap.php** add 
 
-Now in your **Bootstrap.php** add 
-
-```
+```php
 Configure::write('MaintenanceMode', array(
 	'enabled' => true,
 	'view' =>	array(
@@ -30,11 +61,11 @@ Configure::write('MaintenanceMode', array(
 
 Also in the same file find the below code and add this line
 
-```
+```php
 Configure::write('Dispatcher.filters', array(
     'AssetDispatcher',
     'CacheDispatcher',
-    'MaintenanceMode' ## this line 
+    'MaintenanceMode.MaintenanceMode' ## this line 
 ));
 ```
 
