@@ -1,9 +1,12 @@
-Cakephp Maintenance Mode
+Cakephp Maintenance Mode 
 ========================
 
 CakePHP Maintenance Mode is to put your website in maintenance mode while you do your upgrade. Most ppl would add a static file on the server and route all request to it during maintenance. The file is shown to everybody including you unless a rewrite rule or expressions is added to exclude yourself which would complicate the matter.  
 
 This filter file would tell CakePHP to put all requests to maintenance mode i.e show a msg but would allow requests from your IPs to be processed normally.
+
+##Requirement
+CakePHP 2.*
 
 
 ## Installation
